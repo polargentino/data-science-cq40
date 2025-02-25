@@ -76,3 +76,26 @@ except ImportError:
     print("[X] scikit-learn no está instalado")
 
 print("\n\u2705 Prueba finalizada")
+# Salida:
+# [✓] requests v2.32.3
+#   > Status code: 200
+# [✓] beautifulsoup4
+#   > Título encontrado: Hola Mundo
+# [✓] scrapy v2.12.0
+# [✓] selenium v4.29.0
+# [✓] playwright
+#   > Playwright cargó Google
+# [✓] pandas v2.2.3
+#   > DataFrame:
+#    A  B
+# 0  1  4
+# 1  2  5
+# 2  3  6
+# [✓] numpy v2.2.3
+#   > Array: [1 2 3]
+# [✓] matplotlib v3.10.0
+#   > Gráfico guardado como 'grafico.png'
+# [✓] scikit-learn v1.6.1
+
+# ✅ Prueba finalizada
+                       

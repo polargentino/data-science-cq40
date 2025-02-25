@@ -1,5 +1,27 @@
+# Ignorar entornos virtuales
+env/
 venv/
+
+# Archivos de caché de Python
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
+
+# Configuración de VS Code
+.vscode/
+
+# Archivos de logs y bases de datos
+*.log
+*.sqlite3
+
+# Archivos de Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Dependencias instaladas
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Datos temporales o sensibles
 .DS_Store
+*.csv
+*.json
+*.db
