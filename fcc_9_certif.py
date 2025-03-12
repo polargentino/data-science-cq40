@@ -1,3 +1,56 @@
+"""
+
+Visualizador de Datos de Vistas del Foro de freeCodeCamp
+---------------------------------------------------------
+Este script utiliza las bibliotecas Pandas, Matplotlib y Seaborn para analizar y visualizar
+los datos de vistas diarias del foro de freeCodeCamp desde mayo de 2016 hasta diciembre de 2019.
+
+El script realiza las siguientes tareas:
+
+1. **Importación de Datos**:
+   - Carga los datos desde el archivo `fcc-forum-pageviews.csv`.
+   - Analiza las fechas y establece la columna 'date' como índice.
+   - Asegura que la columna 'value' sea de tipo float.
+
+2. **Limpieza de Datos**:
+   - Filtra los datos para eliminar valores atípicos, manteniendo solo aquellos que están
+     entre el percentil 2.5 y el 97.5.
+
+Funciones:
+----------
+- `draw_line_plot()`: 
+    Dibuja un gráfico de líneas que muestra las vistas diarias del foro.
+    - **Salida**: Guarda la figura como `line_plot.png` y devuelve la figura generada.
+
+- `draw_bar_plot()`: 
+    Dibuja un gráfico de barras que muestra el número promedio de vistas diarias por mes y año.
+    - **Salida**: Guarda la figura como `bar_plot.png` y devuelve la figura generada.
+
+- `draw_box_plot()`: 
+    Dibuja dos diagramas de caja: uno por año y otro por mes, para mostrar la distribución
+    de las vistas.
+    - **Salida**: Guarda la figura como `box_plot.png` y devuelve la figura generada.
+
+Ejemplo de Uso:
+---------------
+Si se ejecuta este script directamente, se generarán todas las visualizaciones
+y se guardarán en archivos PNG en el directorio actual.
+
+if name == "main":
+draw_line_plot()
+draw_bar_plot()
+draw_box_plot()
+
+
+Requisitos:
+-----------
+- Asegúrate de tener instaladas las bibliotecas necesarias:
+    - Pandas
+    - Matplotlib
+    - Seaborn
+
+"""
+
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
