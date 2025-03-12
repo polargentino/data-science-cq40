@@ -82,10 +82,10 @@ def draw_heat_map():
     return fig
 
 # Imprimir la matriz de correlación
-print("Matriz de Correlación:")
-print(corr)
+#print("Matriz de Correlación:")
+#print(corr)
 
 # Imprimir los datos limpios
-print("Datos Limpios:")
-print(df_heat.head())
+#print("Datos Limpios:")
+#print(df_heat.head())
 
