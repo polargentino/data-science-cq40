@@ -79,30 +79,52 @@ def draw_box_plot():
     # Preparar datos para los diagramas de caja
     df_box = df.copy()
     df_box.reset_index(inplace=True)
-    df_box['year'] = [d.year for d in df_box.date]
-    df_box['month'] = [d.strftime('%b') for d in df_box.date]
-
-    # Forzar la conversión de 'value' a float
-    df_box['value'] = df_box['value'].astype(float)
+    
+    # Crear columnas para año y mes
+    df_box['year'] = pd.DatetimeIndex(df_box['date']).year
+    df_box['month'] = pd.DatetimeIndex(df_box['date']).strftime('%b')
 
     # Dibujar los diagramas de caja usando Seaborn
     fig, axes = plt.subplots(1, 2, figsize=(20, 8), sharey=True)
 
     # Diagrama de caja por año
-    sns.boxplot(x='year', y='value', data=df_box.astype({'value': float}), ax=axes[0])
+    sns.boxplot(x='year', y='value', data=df_box, ax=axes[0])
     axes[0].set_title("Year-wise Box Plot (Trend)")
     axes[0].set_xlabel("Year")
     axes[0].set_ylabel("Page Views")
 
     # Diagrama de caja por mes
-    sns.boxplot(x='month', y='value', data=df_box.astype({'value': float}), ax=axes[1], order=[
+    sns.boxplot(x='month', y='value', data=df_box, ax=axes[1], order=[
         'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
         'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
     ])
+    
     axes[1].set_title("Month-wise Box Plot (Seasonality)")
     axes[1].set_xlabel("Month")
-    axes[1].set_ylabel("Page Views")
-
+    
     # Guardar imagen y devolver fig (no cambies esta parte)
     fig.savefig('box_plot.png')
+    
     return fig
+
+# Bloque principal para ejecutar las funciones
+if __name__ == "__main__":
+    # Generar todos los gráficos
+    draw_line_plot()
+    draw_bar_plot()
+    draw_box_plot()
+    
+    # Mensaje de confirmación
+    print("¡Visualizaciones creadas exitosamente!")
+    print("Archivos generados:")
+    print("- line_plot.png")
+    print("- bar_plot.png")
+    print("- box_plot.png")
+
+# Salidas: 
+# ¡Visualizaciones creadas exitosamente!
+# Archivos generados:
+# - line_plot.png
+# - bar_plot.png
+# - box_plot.png
+              
