@@ -5,33 +5,55 @@ Qwen2.5-Max
 datos demográficos y responder a las preguntas planteadas. A continuación, te muestro cómo 
 implementar cada cálculo en el archivo
 
-Explicación del Código
-Cargar el Conjunto de Datos :
+Explicación del Código:
+
+1-Cargar el Conjunto de Datos :
+-------------------------------
 Usamos pd.read_csv para cargar el archivo adult.data.csv.
+
 Pregunta 1: Número de Personas por Raza :
+-----------------------------------------
 Usamos value_counts() en la columna race para contar el número de personas por raza.
+
 Pregunta 2: Edad Promedio de los Hombres :
+------------------------------------------
 Filtramos el DataFrame para incluir solo hombres (sex == 'Male') y calculamos la media de la columna age.
+
 Pregunta 3: Porcentaje de Personas con Licenciatura :
+-----------------------------------------------------
 Contamos cuántas personas tienen education == 'Bachelors' y dividimos entre el total de personas.
+
 Preguntas 4 y 5: Educación Avanzada y Salario :
-Filtramos el DataFrame para personas con educación avanzada (Bachelors, Masters, Doctorate) y calculamos el porcentaje que gana más de 50k.
+-----------------------------------------------
+Filtramos el DataFrame para personas con educación avanzada 
+(Bachelors, Masters, Doctorate) y calculamos el porcentaje que gana más de 50k.
 Repetimos el proceso para personas sin educación avanzada.
+
 Pregunta 6: Mínimo Número de Horas Trabajadas :
+-----------------------------------------------
 Usamos .min() en la columna hours-per-week.
+
 Pregunta 7: Porcentaje de Personas que Trabajan el Mínimo de Horas y Ganaron >50k :
-Filtramos el DataFrame para personas que trabajan el mínimo de horas y calculamos el porcentaje que gana más de 50k.
+-----------------------------------------------------------------------------------
+Filtramos el DataFrame para personas que trabajan el mínimo de horas y calculamos el 
+porcentaje que gana más de 50k.
+
 Pregunta 8: País con Mayor Porcentaje de Personas que Ganaron >50k :
-Agrupamos por native-country y calculamos el porcentaje de personas que ganan más de 50k usando .groupby() y .apply().
+--------------------------------------------------------------------
+Agrupamos por native-country y calculamos el porcentaje de personas que ganan más de 50k 
+usando .groupby() y .apply().
+
 Pregunta 9: Ocupación Más Popular en India para Quienes Ganaron >50k :
-Filtramos el DataFrame para personas de India que ganan más de 50k y usamos .mode() para encontrar la ocupación más común.
+----------------------------------------------------------------------
+Filtramos el DataFrame para personas de India que ganan más de 50k y usamos .mode() para 
+encontrar la ocupación más común.
 """
 
 import pandas as pd
 
 def calculate_demographic_data(print_data=True):
     # Cargar el conjunto de datos desde un archivo CSV
-    df = pd.read_csv('/home/pol/Escritorio/data-science-cq40/adult.data.csv')
+    df = pd.read_csv('adult.data.csv')
     # 1. ¿Cuántas personas de cada raza están representadas en este set de datos?
     race_counts = df['race'].value_counts()
 
@@ -91,4 +113,78 @@ def calculate_demographic_data(print_data=True):
         'highest_earning_country_percentage': highest_earning_country_percentage,
         'top_IN_occupation': top_IN_occupation
     }
+# Llamar a la función para ejecutar el análisis
+calculate_demographic_data()
+# Salidas:
+# Número de personas por raza:
+#  race
+# White                 27816
+# Black                  3124
+# Asian-Pac-Islander     1039
+# Amer-Indian-Eskimo      311
+# Other                   271
+# Name: count, dtype: int64
+# Edad promedio de los hombres: 39.4
+# Porcentaje de personas con licenciatura: 16.4
+# Porcentaje de personas con educación avanzada que ganan >50K: 46.5
+# Porcentaje de personas sin educación avanzada que ganan >50K: 17.4
+# Mínimo número de horas trabajadas por semana: 1
+# Porcentaje de personas que trabajan el mínimo de horas y ganan >50K: 10.0
+# País con el mayor porcentaje de personas que ganan >50K: Iran
+# Porcentaje de personas que ganan >50K en ese país: 41.9
+# Ocupación más popular en India para quienes ganan >50K: Prof-specialty
+
+
+# Respuesta: (https://www.perplexity.ai/)
+# ¡Perfecto! Parece que tu código está funcionando correctamente y genera los resultados esperados. 🎉
+
+# La salida que proporcionaste muestra el análisis demográfico basado en el archivo adult.data.csv, y la función calculate_demographic_data() está produciendo los datos correctamente. Aquí tienes un resumen de lo que se imprime:
+
+# Salida del análisis:
+# Número de personas por raza:
+
+# White: 27,816
+
+# Black: 3,124
+
+# Asian-Pac-Islander: 1,039
+
+# Amer-Indian-Eskimo: 311
+
+# Other: 271
+
+# Edad promedio de los hombres:
+
+# 39.4 años
+
+# Porcentaje de personas con licenciatura:
+
+# 16.4%
+
+# Porcentaje de personas con educación avanzada que ganan >50K:
+
+# 46.5%
+
+# Porcentaje de personas sin educación avanzada que ganan >50K:
+
+# 17.4%
+
+# Mínimo número de horas trabajadas por semana:
+
+# 1 hora
+
+# Porcentaje de personas que trabajan el mínimo de horas por semana y ganan >50K:
+
+# 10.0%
+
+# País con el mayor porcentaje de personas que ganan >50K:
+
+# Irán (41.9%)
+
+# Ocupación más popular en India para quienes ganan >50K:
+
+# Prof-specialty
+
+# Si necesitas realizar más análisis o ajustar el código, ¡no dudes en pedírmelo! 😊
+
 
