@@ -4,7 +4,19 @@ custom_key = 'happycoding'  # Clave modificada a 'happycoding'
 
 def vigenere(message, key, direction=1):
     """
-    Implementa el cifrado o descifrado de Vigenère.
+Python es un lenguaje de programación poderoso y popular ampliamente utilizado 
+para la ciencia de datos, visualización de datos, desarrollo web, desarrollo de juegos, 
+aprendizaje automático y más.
+
+En este proyecto, aprenderás conceptos fundamentales de programación en Python, 
+como variables, funciones, bucles y sentencias condicionales. Los usarás para codificar 
+tus primeros programas.
+
+
+    Implementa el cifrado o descifrado de Vigenère.(Herramienta para decodificar / 
+    codificar Vigenere automáticamente. El Cifrado de Vigenere es un sistema de cifrado 
+    de sustitución polialfabético que utiliza una clave y una tabla de doble entrada. 
+    https://www.dcode.fr/cifrado-vigenere)
 
     Parámetros:
         message (str): El mensaje a cifrar o descifrar.

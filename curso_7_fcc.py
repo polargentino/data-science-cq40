@@ -1,4 +1,11 @@
 """
+Los algoritmos son procedimientos paso a paso que los desarrolladores utilizan para realizar 
+cálculos y resolver problemas computacionales.
+
+En este proyecto, aprenderá a utilizar funciones, bucles, declaraciones condicionales y 
+comprensiones de diccionario para implementar un algoritmo de ruta más corta.
+
+
 En matemáticas y ciencias de la computación, un grafo (del griego grafos: dibujo, imagen)1​ 
 es un conjunto de objetos llamados vértices o nodos unidos por enlaces llamados aristas 
 o arcos, que permiten representar relaciones binarias entre elementos de un conjunto.

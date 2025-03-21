@@ -1,5 +1,17 @@
 def convert_to_snake_case(pascal_or_camel_cased_string):
     """
+La comprensión de listas es una forma de construir una nueva lista de Python a partir 
+de tipos iterables: listas, tuplas y cadenas. Todo ello sin usar un bucle for ni el 
+método de lista `.append()`.
+
+En este proyecto, escribirás un programa que toma una cadena formateada en Camel Case o 
+Pascal Case y luego la convierte a Snake Case.
+
+El proyecto consta de dos fases: primero, usarás un bucle for para implementar el programa. 
+Luego, aprenderás a usar la comprensión de listas en lugar de un bucle para lograr los mismos 
+resultados.
+
+
     Convierte una cadena de texto de Pascal Case o Camel Case a Snake Case.
     
     Esta función toma una cadena en formato Pascal Case (ej. 'PascalCase') o

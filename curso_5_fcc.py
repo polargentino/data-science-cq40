@@ -1,5 +1,12 @@
 """
 Ayuda de Balckbox AI
+
+Los métodos numéricos se utilizan para aproximar soluciones a problemas matemáticos que son
+ difíciles o imposibles de resolver analíticamente.
+
+En este proyecto, explorará el método numérico de bisección para encontrar la raíz 
+cuadrada de un número reduciendo iterativamente el rango posible de valores que contienen 
+la raíz cuadrada.
 """
 def square_root_bisection(square_target, tolerance=1e-7, max_iterations=100):
 # def square_root_bisection():

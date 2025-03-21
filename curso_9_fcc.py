@@ -1,5 +1,13 @@
 def merge_sort(array):
     """
+El algoritmo de ordenación por fusión es un algoritmo de ordenación basado en el principio de 
+dividir y vencer.
+
+En este proyecto, aprenderá a interactuar con estructuras de datos ordenando una lista de 
+números aleatorios utilizando el algoritmo de ordenamiento por combinación.
+    
+
+
     Ordena un arreglo utilizando el algoritmo de ordenamiento por mezcla (merge sort).
 
     Parámetros:

@@ -4,6 +4,13 @@ import string  # Importa el módulo string para acceder a constantes de caracter
 
 def generate_password(length=16, nums=1, special_chars=1, uppercase=1, lowercase=1):
     """
+Un módulo de Python es un archivo que contiene un conjunto de declaraciones y definiciones 
+que puedes usar en tu código.
+
+En este proyecto, aprenderás a importar módulos desde la biblioteca estándar de Python. 
+También aprenderás a usar expresiones regulares creando tu propio generador de contraseñas.
+
+
     Genera una contraseña aleatoria segura basada en criterios especificados.
 
     Parámetros:

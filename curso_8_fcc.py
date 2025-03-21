@@ -5,6 +5,13 @@ C = []  # Torre C: Torre objetivo, inicialmente vacía
 
 def move(n, source, auxiliary, target):
     """
+La recursión es un enfoque de programación que permite resolver problemas computacionales 
+complicados con solo un poco de código.
+
+En este proyecto, comenzarás con un enfoque basado en bucles para resolver el rompecabezas 
+matemático de la Torre de Hanói. Después, aprenderás a implementar una solución recursiva.
+
+
     Mueve n discos desde la torre de origen (source) a la torre de destino (target),
     utilizando una torre auxiliar (auxiliary), siguiendo las reglas de la Torre de Hanoi.
 

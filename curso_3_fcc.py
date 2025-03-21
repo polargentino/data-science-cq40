@@ -1,5 +1,12 @@
 def add_expense(expenses, amount, category):
     """
+Las funciones lambda le brindan una manera concisa de escribir funciones pequeñas y 
+descartables en su código.
+
+En este proyecto, explorarás el potencial de las Funciones Lambda mediante la creación 
+de un sistema de seguimiento de gastos. La aplicación resultante demostrará cómo usar 
+las Funciones Lambda para optimizar y optimizar las operaciones.
+
     Agrega un gasto a la lista de gastos.
 
     Parámetros:
